@@ -81,7 +81,8 @@ local MiniRobberies = {
     "Phone",
     "Luggage",
     "ATM",
-    "TV"
+    "TV",
+    "Safe"
 }
 
 local function get_closest_small_robbery()
