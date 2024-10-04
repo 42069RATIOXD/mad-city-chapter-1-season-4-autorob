@@ -57,6 +57,20 @@ task.spawn(function()
 end)
 
 task.wait(getgenv().TimeToLoad)
+
+local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/xrer_mstudio45.lua"))()
+KeySystemUI.New({
+    ApplicationName = "BlueLobster", -- Your Key System Application Name
+    Name = "Mad Lads v8", -- Your Script name
+    Info = "Get Key For Mad Lads v8", -- Info text in the GUI, keep empty for default text.
+    DiscordInvite = "https://discord.gg/cWqTmQDwDJ", -- Optional.
+    AuthType = "clientid" -- Can select verifycation with ClientId or IP ("clientid" or "ip")
+})
+repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
+if KeySystemUI.Finished() and KeySystemUI.Closed == false then
+else
+    game:ShutDown()
+end
 --prepare the script
 
 local char = workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name)
