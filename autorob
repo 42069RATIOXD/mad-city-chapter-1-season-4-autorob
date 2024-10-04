@@ -134,7 +134,6 @@ local function get_closest_small_robbery()
 end
 
 repeat
-pcall(function()
     local closest_robbery = get_closest_small_robbery()
     
     if closest_robbery[1] ~= nil then
@@ -147,7 +146,6 @@ pcall(function()
         evento:FireServer()
     end
     task.wait(0.05)
-end)
 until closest_robbery[1] == nil
 
 task.wait(0.2)
