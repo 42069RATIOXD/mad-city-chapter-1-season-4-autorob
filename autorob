@@ -143,7 +143,9 @@ repeat
         
         local evento = get_event(closest_robbery[1])
         tweenTp(closest_robbery_pos.x, closest_robbery_pos.y, closest_robbery_pos.z, flyspeed)
+if evento ~= nil and evento.Parent ~= nil then
         evento:FireServer()
+end
     end
     task.wait(0.05)
 until closest_robbery[1] == nil
